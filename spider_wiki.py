@@ -1,7 +1,7 @@
 #/usr/bin/python
 # -*- coding: utf-8 -*-
 # This file has been to get host_list which were had remark from the wiki list;
-# wiki http://wiki.ele.to:8090/pages/viewpage.action?pageId=108648512
+# wiki http://wiki.test.to:8090/pages/viewpage.action?pageId=108648512
 #
 
 
@@ -12,14 +12,13 @@ import urllib2
 from bs4 import BeautifulSoup
 import logging
 
-_http_wget = "http://wiki.ele.to:8090/pages/viewpage.action?pageId=108648512"
+_http_wget = "http://wiki.test.to:8090/pages/viewpage.action?pageId=108648512"
 Path = os.getcwd()
 logging.basicConfig(level=logging.DEBUG,format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',datefmt='%a, %d %b %Y %H:%M:%S',filename=("%s/_EXE.log")%Path,filemode='a')
 _map_result = {}
 
 def _get_list (get_url, _map_result ):
-    #headers = {"User-agent":"Mozilla/5.0 (Windows NT 6.1; rv:24.0) Gecko/20100101 Firefox/24.0","Cookie":"wikiCoffeeTokenLogin=true; confluence.last-web-item-clicked=system.space.tools%2Fpermissions%2Fspacepermissions; JSESSIONID=8CB9ED347198A7D128C8314538856072; COFFEE_TOKEN=817f9acb-622e-4a63-bb80-0652628774c3"}
-    headers = {"User-agent":"Mozilla/5.0 (Windows NT 6.1; rv:24.0) Gecko/20100101 Firefox/24.0","Cookie":"COFFEE_TOKEN=""; wikiCoffeeTokenLogin=true; confluence.last-web-item-clicked=system.space.tools%2Fpermissions%2Fspacepermissions; JSESSIONID=F612A0A9E85B0CF766082E12C6D90F95; COFFEE_TOKEN=369d9309-d78c-49c0-8500-ecdeef1a3ee5"}
+    headers = {"User-agent":"Mozilla/5.0 (Windows NT 6.1; rv:24.0) Gecko/20100101 Firefox/24.0","Cookie":"COFFEE_TOKEN=""; wikiCoffeeTokenLogin=true; confluence.last-web-item-clicked=system.space.tools%2Fpermissions%2Fspacepermissions; JSESSIONID=UUDD8888U8U78; COFFEE_TOKEN=TXTXTXTTDJKHDS"}
 
     url_result = urllib2.Request(url=get_url, headers = headers )
     url_open = urllib2.urlopen(url_result)
